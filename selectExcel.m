@@ -1,6 +1,8 @@
 function fullfilename = selectExcel
-
+        fullfilename = '';
         [filename, pathname, ~] = uigetfile('*.xlsx', '选择 Excel 文件');
-        fullfilename = fullfile(pathname,filename);
+        if filename
+            fullfilename = fullfile(pathname,filename);
+        end
 
 end
